@@ -4,3 +4,6 @@ author: "Aqua Security"
 runs:
   using: "docker"
   image: "Dockerfile"
+  env:
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    URL: ${{ github.event.pull_request.comments_url }}
