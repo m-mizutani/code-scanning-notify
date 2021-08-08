@@ -5,4 +5,4 @@ jobs:
     runs-on: ubuntu-latest
     name: Action test
     steps:
-      - uses: m-mizutani/cs-alert-notify@v0.0.1
+      - uses: m-mizutani/cs-alert-notify@v0.0.2
