@@ -1,8 +1,0 @@
-on: [push]
-
-jobs:
-  testing:
-    runs-on: ubuntu-latest
-    name: Action test
-    steps:
-      - uses: m-mizutani/cs-alert-notify@v0.0.4

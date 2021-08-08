@@ -1,9 +1,12 @@
 name: "Alert notification"
 description: "Scans container images for vulnerabilities with Trivy"
 author: "Aqua Security"
+inputs:
+  token:
+    description: "GtiHub token from secrets.GITHUB_TOKEN"
+    required: true
 runs:
   using: "docker"
   image: "Dockerfile"
   env:
-    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    URL: ${{ github.event.pull_request.comments_url }}
+    GITHUB_TOKEN: ${{ inputs.token }}
