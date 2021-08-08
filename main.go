@@ -6,6 +6,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"strings"
 
 	"github.com/google/go-github/v37/github"
 	"golang.org/x/oauth2"
@@ -23,9 +24,8 @@ func main() {
 	))
 	client := github.NewClient(tc)
 
-	owner := os.Getenv("GITHUB_REPOSITORY_OWNER")
-	repo := os.Getenv("GITHUB_REPOSITORY")
-	alerts, resp, err := client.CodeScanning.ListAlertsForRepo(ctx, owner, repo, &github.AlertListOptions{})
+	repo := strings.Split(os.Getenv("GITHUB_REPOSITORY"), "/")
+	alerts, resp, err := client.CodeScanning.ListAlertsForRepo(ctx, repo[0], repo[1], &github.AlertListOptions{})
 	if err != nil {
 		log.Fatalf("error: %v\n", err)
 	}
