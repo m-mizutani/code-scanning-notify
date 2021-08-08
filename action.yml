@@ -1,0 +1,6 @@
+name: "Alert notification"
+description: "Scans container images for vulnerabilities with Trivy"
+author: "Aqua Security"
+runs:
+  using: "docker"
+  image: "Dockerfile"
