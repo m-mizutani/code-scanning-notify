@@ -1,7 +1,19 @@
-name: "Alert notification"
-description: "Scans container images for vulnerabilities with Trivy"
-author: "Aqua Security"
+name: "Code Scanning Alert Notification"
+description: "Notify new & fixed security alert to Pull Request"
+author: "Masayoshi Mizutani"
 inputs:
+  head-ref:
+    description: Source branch of pull request. Set github.head_ref
+    required: true
+  base-ref:
+    description: Target branch of pull request. Set github.base_ref
+    required: true
+  repo:
+    description: Repository name. Set github.repository
+    required: true
+  issue-id:
+    description: IssueID. Set github.event.number
+    required: true
   token:
     description: "GtiHub token from secrets.GITHUB_TOKEN"
     required: true
@@ -10,3 +22,8 @@ runs:
   image: "Dockerfile"
   env:
     GITHUB_TOKEN: ${{ inputs.token }}
+  args:
+    - "-s ${{ inputs.head-ref }}"
+    - "-t ${{ inputs.base-ref }}"
+    - "-r ${{ inputs.repo }}"
+    - "-i ${{ inputs.issue-id }}"
