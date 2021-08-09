@@ -4,4 +4,4 @@ COPY *.go go.* /src/
 COPY pkg /src/pkg
 WORKDIR /src
 RUN go build -o /notify
-CMD ["/notify"]
+ENTRYPOINT ["/notify"]

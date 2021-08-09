@@ -23,7 +23,11 @@ runs:
   env:
     GITHUB_TOKEN: ${{ inputs.token }}
   args:
-    - "-s ${{ inputs.head-ref }}"
-    - "-t ${{ inputs.base-ref }}"
-    - "-r ${{ inputs.repo }}"
-    - "-i ${{ inputs.issue-id }}"
+    - "-s"
+    - "${{ inputs.head-ref }}"
+    - "-t"
+    - "${{ inputs.base-ref }}"
+    - "-r"
+    - "${{ inputs.repo }}"
+    - "-i"
+    - " ${{ inputs.issue-id }}"
