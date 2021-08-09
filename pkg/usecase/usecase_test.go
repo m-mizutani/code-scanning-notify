@@ -4,10 +4,10 @@ import (
 	"testing"
 
 	"github.com/google/go-github/v37/github"
-	"github.com/m-mizutani/cs-alert-notify/pkg/domain/interfaces"
-	"github.com/m-mizutani/cs-alert-notify/pkg/domain/model"
-	"github.com/m-mizutani/cs-alert-notify/pkg/infra"
-	"github.com/m-mizutani/cs-alert-notify/pkg/usecase"
+	"github.com/m-mizutani/code-scanning-notify/pkg/domain/interfaces"
+	"github.com/m-mizutani/code-scanning-notify/pkg/domain/model"
+	"github.com/m-mizutani/code-scanning-notify/pkg/infra"
+	"github.com/m-mizutani/code-scanning-notify/pkg/usecase"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

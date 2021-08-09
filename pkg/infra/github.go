@@ -6,9 +6,9 @@ import (
 	"net/http"
 
 	"github.com/google/go-github/v37/github"
-	"github.com/m-mizutani/cs-alert-notify/pkg/domain/interfaces"
-	"github.com/m-mizutani/cs-alert-notify/pkg/domain/model"
-	"github.com/m-mizutani/cs-alert-notify/pkg/utils"
+	"github.com/m-mizutani/code-scanning-notify/pkg/domain/interfaces"
+	"github.com/m-mizutani/code-scanning-notify/pkg/domain/model"
+	"github.com/m-mizutani/code-scanning-notify/pkg/utils"
 	"github.com/m-mizutani/goerr"
 	"golang.org/x/oauth2"
 )

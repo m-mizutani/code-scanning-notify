@@ -1,4 +1,4 @@
-module github.com/m-mizutani/cs-alert-notify
+module github.com/m-mizutani/code-scanning-notify
 
 go 1.16
 

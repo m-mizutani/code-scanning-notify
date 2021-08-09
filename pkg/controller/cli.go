@@ -4,10 +4,10 @@ import (
 	"errors"
 	"os"
 
-	"github.com/m-mizutani/cs-alert-notify/pkg/domain/interfaces"
-	"github.com/m-mizutani/cs-alert-notify/pkg/domain/model"
-	"github.com/m-mizutani/cs-alert-notify/pkg/usecase"
-	"github.com/m-mizutani/cs-alert-notify/pkg/utils"
+	"github.com/m-mizutani/code-scanning-notify/pkg/domain/interfaces"
+	"github.com/m-mizutani/code-scanning-notify/pkg/domain/model"
+	"github.com/m-mizutani/code-scanning-notify/pkg/usecase"
+	"github.com/m-mizutani/code-scanning-notify/pkg/utils"
 	"github.com/m-mizutani/goerr"
 	cli "github.com/urfave/cli/v2"
 )
@@ -32,7 +32,7 @@ func (x *Controller) CLI(args []string) {
 	var cliCfg cliConfig
 
 	app := &cli.App{
-		Name:  "cs-alert-notify",
+		Name:  "code-scanning-notify",
 		Usage: "GitHub Action to notify Code Scanning Security Alert to PR",
 		Flags: []cli.Flag{
 			&cli.StringFlag{

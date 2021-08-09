@@ -1,7 +1,7 @@
 package usecase
 
 import (
-	"github.com/m-mizutani/cs-alert-notify/pkg/domain/interfaces"
+	"github.com/m-mizutani/code-scanning-notify/pkg/domain/interfaces"
 )
 
 func (x *Usecase) InjectFactories(fac *interfaces.Factories) {

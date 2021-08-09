@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/m-mizutani/cs-alert-notify/pkg/controller"
+	"github.com/m-mizutani/code-scanning-notify/pkg/controller"
 )
 
 func main() {
