@@ -30,4 +30,4 @@ runs:
     - "-r"
     - "${{ inputs.repo }}"
     - "-i"
-    - " ${{ inputs.issue-id }}"
+    - "${{ inputs.issue-id }}"
